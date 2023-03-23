@@ -16,10 +16,23 @@ export default {
       selectedPost: null
     };
   },
-  mounted() {
-    this.selectedPost = this.searchResult.filter(
-      item => item.id == this.$route.params.id
-    );
+  watch : {
+    searchResult(){
+      this.setSelectedPost()
+    }
+  },
+  created(){
+        if(this.searchResult){
+          this.setSelectedPost()
+        }
+        
+  },
+  methods : {
+    setSelectedPost(){
+      this.selectedPost = this.searchResult.filter(
+        item => item.id == this.$route.params.id
+      );
+    }
   }
 };
 </script>

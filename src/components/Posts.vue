@@ -3,7 +3,6 @@
   <PostListItem
     :posts="searchResult"
     :filteredPosts="filteredPosts"
-    v-if="searchResult.length != 0"
   />
 </template>
 <script>

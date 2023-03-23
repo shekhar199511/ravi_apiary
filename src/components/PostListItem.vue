@@ -4,7 +4,6 @@
       v-for="(post, index) in getPosts"
       :key="index"
       class="card"
-      @click="seePostHandler(post)"
     >
       <router-link :to="`/post/view/${post.id}`">
         <p>{{ post.title }}</p>
