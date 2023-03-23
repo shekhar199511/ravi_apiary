@@ -1,7 +1,7 @@
 <template>
   <input
     type="text"
-    placeholder="Search"
+    placeholder="Search post"
     v-model="searchKey"
     @input="searchHandler"
     class="input"
